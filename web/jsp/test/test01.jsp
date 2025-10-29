@@ -53,13 +53,11 @@
     <h3>4. 나이 구하기</h3>
     <%
         String birthDay = "20010820";
-        int age = Integer.parseInt(birthDay.substring(0, 4));
+        int age =2025 - Integer.parseInt(birthDay.substring(0, 4)) + 1 ;
 
-        double qwer = 35.123456;
-        
 
     %>
-    <div>20010820의 나이는 <%= age %>살 입니다.</div>
+    <div><%= birthDay %>의 나이는 <%= age %>살 입니다.</div>
 
 
 
