@@ -11,18 +11,33 @@
 <body>
 
     <%
+        String mode = request.getParameter("date");
 
-        Date now = new Date();
 
-        if(request.getParameter("date").equals("date")){
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy년 MM월 dd일");
-            String nowdate = formatter.format(now);
-        }
+        String result = getMode(mode);
+
 
     %>
 
+
+    <%!
+        public String getMode(String mode){
+            Date now = new Date();
+
+            if(mode.equals("date")){
+                SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy년 MM월 dd일");
+                String nowdate = dateFormatter.format(now);
+                return  "오늘 날짜" + nowdate ;
+            }else if (mode.equals("time")){
+                SimpleDateFormat timeFormatter = new SimpleDateFormat("HH시 mm분 ss초");
+                String nowtime = timeFormatter.format(now);
+                return "현재 시간" + nowtime;
+            }
+            return null;
+        }
+    %>
         <div class="container">
-            <div class=" display-2">오늘 날짜 2025년 10월 29일</div>
+            <div class=" display-2"><%= result %></div>
         </div>
 
 </body>

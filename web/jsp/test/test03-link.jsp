@@ -11,8 +11,9 @@
     <div class="container">
         <h3>날짜, 시간 링크</h3>
 
-        <a href="#" class="btn btn-info">현재 시간 확인</a>
-        <a href="#" class="btn btn-sucess">현재 날짜 확인</a>
+
+        <a href="/jsp/test/test03.jsp?date=time"  class="btn btn-info">현재 시간 확인</a>
+        <a href="/jsp/test/test03.jsp?date=date"  class="btn btn-success">현재 날짜 확인</a>
 
     </div>
 
