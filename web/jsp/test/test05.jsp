@@ -12,17 +12,18 @@
         String cmString = request.getParameter("cm");
         String[] mode = request.getParameterValues("mode");
 
-        String result = "";
+//        String result = "";
+        StringBuilder sb = new StringBuilder();
         int cm = Integer.parseInt(cmString);
         for(int i = 0 ; i< mode.length; i++){
             if(mode[i].contains("inch")){
-                result += cm * 0.3937 + "in <br>";
+                sb.append(cm * 0.3937 + "in <br>\n      ");
             }else if(mode[i].contains("yard")){
-                result += (cm / 100.0) * 1.0936 + "yd <br>";
+                sb.append((cm / 100.0) * 1.0936 + "yd <br>\n        ");
             }else if(mode[i].contains("feet")){
-                result += (cm / 100.0) * 3.2808 + "ft <br>";
+                sb.append((cm / 100.0) * 3.2808 + "ft <br>\n        ");
             }else if(mode[i].contains("meter")){
-                result += cm * 100.0 + "m <br>";
+                sb.append( cm / 100.0 + "m <br>\n");
             }
         }
     %>
@@ -32,7 +33,9 @@
 
         <h4> <%= cm%> cm</h4>
         <hr>
-        <h4><%= result%></h4>
+        <h4>
+            <%= sb%>
+        </h4>
 
 
 

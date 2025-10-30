@@ -13,7 +13,7 @@
             <div class="d-flex align-items-end">
                 <input name="cm" type="text"><label>cm</label>
             </div>
-            <div class="d-flex">
+            <div class="d-flex mt-2">
                 <label><input type="checkbox" name="mode" value="inch">인치</label>
                 <label><input type="checkbox" name="mode" value="yard">야드</label>
                 <label><input type="checkbox" name="mode" value="feet">피트</label>
