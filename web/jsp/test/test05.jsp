@@ -13,6 +13,8 @@
         String[] mode = request.getParameterValues("mode");
 
 //        String result = "";
+        // StringBuilder는 보통 문자열을 이어 붙일 때 쓴다
+        // String += 이런식으로 붙이면 새로운 객체를 생성하면서 붙이게 된다. 그러면 메모리를 계속쓰는거여서 이처럼 쓰면 욕먹음
         StringBuilder sb = new StringBuilder();
         int cm = Integer.parseInt(cmString);
         for(int i = 0 ; i< mode.length; i++){
