@@ -11,6 +11,7 @@
 <body>
 
     <%
+        // 어떤 정보를 보여줄지, "date" , "time"
         String mode = request.getParameter("date");
 
 
@@ -25,13 +26,13 @@
             Date now = new Date();
 
             if(mode.equals("date")){
-                SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy년 MM월 dd일");
+                SimpleDateFormat dateFormatter = new SimpleDateFormat("오늘 날짜 yyyy년 MM월 dd일");
                 String nowdate = dateFormatter.format(now);
-                return  "오늘 날짜" + nowdate ;
+                return  nowdate ;
             }else if (mode.equals("time")){
-                SimpleDateFormat timeFormatter = new SimpleDateFormat("HH시 mm분 ss초");
+                SimpleDateFormat timeFormatter = new SimpleDateFormat("현재 시간 HH시 mm분 ss초");
                 String nowtime = timeFormatter.format(now);
-                return "현재 시간" + nowtime;
+                return nowtime;
             }
             return null;
         }
