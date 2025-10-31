@@ -56,17 +56,24 @@
             }
         };
         list.add(map);
+
+        String idString = request.getParameter("id");
+        int id = Integer.parseInt(idString);
     %>
 
     <div class="container">
         <div class="d-flex">
-            <img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/4808972756194.jpg">
+            <% for(Map<String, Object> book : list){
+                if(book.get("id").equals(id)){
+            %>
+            <img src="<%= book.get("image")%>">
             <div >
-                <div class="display-2 ">아몬드</div>
-                <div class="display-3 text-primary">손원평</div>
-                <div class="display -4 text-secondary">창비</div>
+                <div class="display-2 "><%= book.get("title")%></div>
+                <div class="display-3 text-primary"><%= book.get("author")%></div>
+                <div class="display -4 text-secondary"><%= book.get("publisher")%></div>
             </div>
-
+            <%  }
+            } %>
         </div>
 
     </div>
