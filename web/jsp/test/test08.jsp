@@ -59,9 +59,9 @@
         list.add(map);
     %>
 
-    <div class="container text-center">
-        <h3>책 제목</h3>
-        <table class="table ">
+    <div class="container">
+        <h3 class="text-center">책 제목</h3>
+        <table class="table text-center ">
             <thead>
                 <tr>
                     <th>id</th>
@@ -75,7 +75,7 @@
                 <tr>
                     <td><%= book.get("id")%></td>
                     <td> <img width="200" height="300" src="<%= book.get("image")%>"> </td>
-                    <td ><a href="/jsp/test/test08-form.jsp?id=<%= book.get("id") %>"><%= book.get("title")%></a></td>
+                    <td class="display-4"><a href="/jsp/test/test08-form.jsp?id=<%= book.get("id") %>"><%= book.get("title")%></a></td>
                 </tr>
             </form>
             <% } %>

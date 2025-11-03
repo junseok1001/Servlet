@@ -62,20 +62,20 @@
     %>
 
     <div class="container">
-        <div class="d-flex">
             <% for(Map<String, Object> book : list){
-                if(book.get("id").equals(id)){
+                // equals도 좋지만 형변환 해도 괜찮음 (수정)
+                if(id== (Integer)book.get("id")){
             %>
+        <div class="d-flex">
             <img src="<%= book.get("image")%>">
-            <div >
-                <div class="display-2 "><%= book.get("title")%></div>
-                <div class="display-3 text-primary"><%= book.get("author")%></div>
-                <div class="display -4 text-secondary"><%= book.get("publisher")%></div>
+            <div class="ml-4" >
+                <div class="display-2 font-weight-bold"><%= book.get("title")%></div>
+                <div class="display-3 text-info"><%= book.get("author")%></div>
+                <div class="display-4 text-secondary mt-3"><%= book.get("publisher")%></div>
             </div>
+        </div>
             <%  }
             } %>
-        </div>
-
     </div>
 
 </body>
