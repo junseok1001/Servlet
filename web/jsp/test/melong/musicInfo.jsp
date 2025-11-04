@@ -99,14 +99,20 @@
 %>
 
 <div class="container">
-    <header class="d-flex justify-cotent-center align-items-center mt-3">
-        <div class="display-4 mr-3"><a class="text-success text-decoration-none text-success" href="/jsp/test/melong/test10.jsp">Melong</a></div>
-        <div class="d-flex ml-3">
-            <input class="form-control col-9" type="text">
-            <button class="btn btn-info" type="button">검색</button>
+    <header class="d-flex">
+        <div class="logo col-2 d-flex align-items-center">
+            <a class="text-success text-decoration-none text-success" href="/jsp/test/melong/test10.jsp"><h1>Melong</h1></a>
+        </div>
+        <div class="search col-10 d-flex align-items-center">
+            <div class="input-group col-5">
+                <input type="text" class="form-control" >
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="submit">검색</button>
+                </div>
+            </div>
         </div>
     </header>
-    <nav class=" mt-2">
+    <nav class="main-menu">
         <ul class="nav">
             <li class="nav-items"><a class="nav-link text-dark font-weight-bold" href="#">멜롱챠트</a></li>
             <li class="nav-items"><a class="nav-link text-dark font-weight-bold" href="#">최신음악</a></li>

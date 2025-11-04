@@ -1,18 +1,20 @@
-a {
-    font-weight:normal;
-}
-
-
-#wrap{
+#wrap {
     width:1200px;
-    margin : 0 auto;
+    margin: 0 auto;
 }
 
-header {
+header > .logo {
     height:100px;
 }
 
-header > .logo{
+header > .search {
     height:100px;
 }
 
+.main-menu {
+    height:40px;
+}
+
+footer {
+    height:80px;
+}
