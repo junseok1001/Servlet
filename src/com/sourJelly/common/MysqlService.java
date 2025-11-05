@@ -27,8 +27,10 @@ public class MysqlService {
             // connection 객체를 리턴하는거라 connection 객체 만들기
             connection =  DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
+            //접속 실패
             return false;
         }
+        //접속 성공
         return true;
     }
     //조회하기

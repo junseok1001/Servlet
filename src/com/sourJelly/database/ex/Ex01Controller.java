@@ -38,6 +38,8 @@ public class Ex01Controller extends HttpServlet {
 
             //쿼리 수행
             String query = "SELECT * FROM `used_goods`;";
+            //쿼리를 수행하기 위한 객체를 생성해야한다. (이유는 모르고 사용법?)
+            //Statement 객체 만들기. 이 객체를 connection으로부터 얻는다.
             Statement statement = connection.createStatement();
 
             ResultSet resultSet =  statement.executeQuery(query);

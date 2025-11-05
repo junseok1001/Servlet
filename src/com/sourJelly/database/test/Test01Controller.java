@@ -14,56 +14,52 @@ public class Test01Controller extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
+
+
         response.setContentType("text/plain");
+
         PrintWriter out = response.getWriter();
 
-
         try {
-            // 데이터 베이스를 접속하기위한 규격 (Driver) 사용
-            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
 
-            //접속을 위한 정보 준비
-            // 서버 주소, 포트 , 데이터베이스 명
             String url = "jdbc:mysql://localhost:3306/jun_study";
-            // 데이터베이스 사용자명
             String username = "root";
-            // 데이터베이스 비밀번호
             String password = "root";
 
-            // 접속 및 접속 관리 객체 얻어오기
-            Connection connection =  DriverManager.getConnection(url, username, password);
 
-            //쿼리를 수행
+            Connection connection = DriverManager.getConnection(url, username, password);
+
+//            String query = "INSERT INTO `real_estate`\n" +
+//                    "(`realtor_id`, `address`, `area`, `type`, `price`)\n" +
+//                    "VALUE\n" +
+//                    "(3, '헤라펠리스 101동 5305호', 350, '매매', 1500000);";
+//
+//            Statement statement = connection.createStatement();
+//
+//
+//            int count = statement.executeUpdate(query);
+//            out.println(count + ": 수행된 쿼리 수");
+
             String query = "SELECT `address`, `area`, `type` FROM `real_estate` ORDER BY `id` DESC LIMIT 10;";
             Statement statement = connection.createStatement();
-
-            ResultSet resultSet = statement.executeQuery(query);
+            ResultSet resultSet = statement.executeQuery(query); // resultSet 은 데이터베이스의 모든행을 가지고있지 않고 한행 가지고 있다가 없애고 다음행 가져오고 이런형태임.
 
             while(resultSet.next()){
 
-                // adress area type
                 String address = resultSet.getString("address");
                 int area = resultSet.getInt("area");
                 String type = resultSet.getString("type");
 
+
+                // 잊지말기
+                // response body 클라이언트에게 전달할 데이터를 문자열로 만들어 보내는 중이다 현재 **
                 out.println("매물주소 : " + address + ", 면적 : " + area + ", 타입 : " + type);
+
             }
+
             statement.close();
-
-//            query = "INSERT INTO `real_estate`\n" +
-//                    "(`realtor_id`, `address`, `area`, `type`, `price`)\n" +
-//                    "VALUE\n" +
-//                    "(3, '헤라펠리스 101동 5305호', 350, '매매', 1500000);";
-//            statement = connection.createStatement();
-//
-//            int count = statement.executeUpdate(query);
-//
-//            out.println("저장된 행 : " + count);
-//            statement.close();
-
             connection.close();
-
-
 
 
         } catch (SQLException e) {
