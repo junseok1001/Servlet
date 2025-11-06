@@ -22,7 +22,7 @@
         </nav>
         <section class="main-content bg-primary">
             <article class="contents d-flex flex-wrap">
-                <div class="items border">이제 들어갈곳</div>
+                <div class=" items">이제 들어갈곳</div>
             </article>
         </section>
         <footer class="copyright d-flex justify-content-center align-items-center">

@@ -23,8 +23,10 @@ header > .logo{
     height:500px;
 }
 
-.contents > items{
-    border-color:rgb(255,127,80);
+.contents > .items{
+    width: 400px;
+    height: 250px;
+    border:2px solid rgb(255,127,80);
 }
 
 .copyright{
