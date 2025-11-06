@@ -1,0 +1,33 @@
+#wrap{
+    width:1200px;
+    margin: 0 auto;
+}
+
+header{
+    height:100px;
+    background-color:rgb(255,127,80);
+}
+
+header > .logo{
+    font-weight:bold;
+}
+
+.main-menu{
+    height:60px;
+    background-color:rgb(255,127,80);
+    font-size:20px;
+
+}
+
+.main-content{
+    height:500px;
+}
+
+.contents > items{
+    border-color:rgb(255,127,80);
+}
+
+.copyright{
+    height:200px;
+
+}

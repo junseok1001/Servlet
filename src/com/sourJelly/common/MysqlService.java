@@ -8,7 +8,24 @@ import java.util.Map;
 
 public class MysqlService {
 
+    // design pattern 중 하나인 싱클턴 패턴
+    // singleton pattern -> 클래스 내에서 하나의 객체만 생성하고 이를 활용하도록 제한
+    // Singletom pattern -> 객체를 무분별로 생성하는것이 아닌 하나 생성후 돌려쓰는 형태 -> 이유 : 데이터베이스를 접속하는것을 생성자에 의해 계속하다보면 접속하려는 서버에 부하가 많이쌓여서
+
+    // static 변수 : 객체생성 없이 사용할수 있는 맴버변수
+    private static MysqlService mysqlService = null;
+
     private Connection connection;
+
+    // 해당 클래스 객체를 사용할수 있도록 return 해주는 매서드
+    // 객체를 사용하는 쪽에서 생성자 대신 활용
+    // static 매서드 : 객체 생성 없이 호출 할 수 있는 매서드
+    public static MysqlService getInstance(){
+        if(mysqlService == null){
+            mysqlService = new MysqlService();
+        }
+        return mysqlService;
+    }
 
     // 기능 단위로 나눈다.
     // 접속하기
@@ -44,13 +61,14 @@ public class MysqlService {
             ResultSetMetaData rsmd =  resultSet.getMetaData();
 
             // 컬럼 개수 얻어오기
-
             List<String> columnList = new ArrayList<>();
             int count = rsmd.getColumnCount();
             for(int i = 1; i <= count; i++){
                 String name = rsmd.getColumnName(i);
                 columnList.add(name);
             }
+
+            //컬럼에 대응하는 데이터 가져오기
             List<Map<String, Object>> resultList = new ArrayList<>();
             while(resultSet.next()){
                 // 한행의 정보를 map 으로 구성

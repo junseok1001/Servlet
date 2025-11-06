@@ -10,11 +10,13 @@
 </head>
 <body>
 <%
-    MysqlService mysqlService = new MysqlService();
+    MysqlService mysqlService = MysqlService.getInstance();
 
     mysqlService.connect();
 
     List<Map<String, Object>> userList = mysqlService.select("SELECT * FROM `new_user`;");
+
+    mysqlService.disconnect();
 %>
     <h3>사용자 리스트</h3>
 
