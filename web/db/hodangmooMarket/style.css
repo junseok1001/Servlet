@@ -23,6 +23,12 @@ header > .logo{
     height:500px;
 }
 
+.contents > .insert{
+    width: 1000px;
+    height:500px;
+    margin: 0 auto;
+}
+
 .contents > .items{
     width: 400px;
     height: 250px;
