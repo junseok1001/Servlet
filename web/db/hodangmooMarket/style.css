@@ -20,14 +20,10 @@ header > .logo{
 }
 
 .main-content{
-    height:500px;
+    weight:1200px;
 }
 
-.contents > .items{
-    width: 400px;
-    height: 250px;
-    border:2px solid rgb(255,127,80);
-}
+
 
 .copyright{
     height:200px;
