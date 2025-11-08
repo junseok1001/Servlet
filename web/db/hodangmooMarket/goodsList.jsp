@@ -20,8 +20,15 @@
                 <li class="nav-item"><a class="nav-link text-white">마이페이지</a></li>
             </ul>
         </nav>
-        <section class="main-content">
-
+        <section class="main-content ">
+            <article class="contents d-flex flex-wrap justify-content-around">
+                <div class="items my-2 ">뭐임</div>
+                <div class="items my-2 ">뭐임</div>
+                <div class="items my-2 ">뭐임</div>
+                <div class="items my-2 ">뭐임</div>
+                <div class="items my-2 ">뭐임</div>
+                <div class="items my-2 ">뭐임</div>
+            </article>
         </section>
         <footer class="copyright d-flex justify-content-center align-items-center">
             <div class="text-secondary">Copyright 2025. HONG All Rights Reserved.</div>

@@ -23,9 +23,7 @@ header > .logo{
     weight:1200px;
 }
 
-<<<<<<< HEAD
 
-=======
 .contents > .insert{
     width: 1000px;
     height:500px;
@@ -33,11 +31,11 @@ header > .logo{
 }
 
 .contents > .items{
-    width: 400px;
+    width: 380px;
     height: 250px;
     border:2px solid rgb(255,127,80);
 }
->>>>>>> 91937e11255573b754c2a8b6b833ddc7daf83e5b
+
 
 .copyright{
     height:200px;
