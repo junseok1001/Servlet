@@ -22,8 +22,34 @@
     </nav>
     <section class="main-content ">
         <article class="contents d-flex flex-wrap">
-            <div class="insert bg-danger">
-                뭐임
+            <div class="insert p-2">
+                <div class=" display-4 pt-3">물건 올리기</div>
+                <div class="d-flex justify-content-between mt-3">
+                    <select class="form-control col-2">
+                        <option value="0">아이디를 선택하세요</option>
+                        <option value="0">오준석</option>
+                        <option value="0">나</option>
+                        <option value="0">너</option>
+                        <option value="0">우리</option>
+                    </select>
+                    <input class="form-control col-6" placeholder="제목" type="text">
+                    <div class="input-group mb-3 col-3">
+                        <input type="text" class="form-control" placeholder="가격">
+                        <div class="input-group-append">
+                            <span class="input-group-text">원</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <textarea class="form-control" rows="5" cols="100"></textarea>
+                </div>
+                <div class="input-group mb-3 mt-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text font-weight-bold">이미지 url</span>
+                    </div>
+                    <input type="text" class="form-control" id="basic-url">
+                </div>
+                <button class="boton w-100 btn" type="button">저장</button>
             </div>
         </article>
     </section>
