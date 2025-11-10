@@ -36,6 +36,15 @@ header > .logo{
     border:2px solid rgb(255,127,80);
 }
 
+.items > .title{
+    font-size:15px;
+    font-weight:bold;
+}
+
+.items > .author{
+    color: orangered;
+}
+
 
 .copyright{
     height:200px;

@@ -22,12 +22,12 @@
         </nav>
         <section class="main-content ">
             <article class="contents d-flex flex-wrap justify-content-around">
-                <div class="items my-2 ">뭐임</div>
-                <div class="items my-2 ">뭐임</div>
-                <div class="items my-2 ">뭐임</div>
-                <div class="items my-2 ">뭐임</div>
-                <div class="items my-2 ">뭐임</div>
-                <div class="items my-2 ">뭐임</div>
+                <div class="items my-2 p-3 ">
+                    <div ><img width="340" height="150" src="https://cdn.pixabay.com/photo/2025/06/25/22/55/lavender-9680870_640.jpg"></div>
+                    <div class="title mt-2">[팝니다] 맥북 프로 팔아요</div>
+                    <div class="text-secondary small"> 180000</div>
+                    <div class="author">최준</div>
+                </div>
             </article>
         </section>
         <footer class="copyright d-flex justify-content-center align-items-center">
