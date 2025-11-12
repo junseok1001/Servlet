@@ -26,8 +26,8 @@
         </header>
         <nav class="main-menu">
             <ul class="nav nav-fill font-weight-bold">
-                <li class="nav-item"><a class="nav-link text-white" href="#">리스트</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">물건올리기</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="/db/hongdangmooMarket/goodsList.jsp">리스트</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="/db/hongdangmooMarket/Insertgoods.jsp">물건올리기</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#">마이페이지</a></li>
             </ul>
         </nav>

@@ -15,7 +15,7 @@
 
         mysqlService.connect();
 
-        List<Map<String, Object>> urlList = mysqlService.select("SELECT * FROM `url` ORDER BY `id` DESC;");
+        List<Map<String, Object>> urlList = mysqlService.select("SELECT * FROM `url`;");
     %>
 
     <div class="container">
